@@ -34,7 +34,7 @@ CREATE TABLE `patient` (
   `prescriptions` varchar(45) NOT NULL DEFAULT 'Not tested',
   `phone_number` varchar(45) NOT NULL,
   PRIMARY KEY (`patient_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `questionnaires` (
   `clusters` varchar(45) NOT NULL,
   `close_contact` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +72,6 @@ CREATE TABLE `questionnaires` (
 
 LOCK TABLES `questionnaires` WRITE;
 /*!40000 ALTER TABLE `questionnaires` DISABLE KEYS */;
-INSERT INTO `questionnaires` VALUES (15,1,'Antigen Rapid Test Kit (RTK)','Fully Vaccinated','Fever, Cough','Yes','Yes'),(16,2,'Antigen Rapid Test Kit (RTK)','Fully Vaccinated','Fever, Cough','Yes','Yes');
 /*!40000 ALTER TABLE `questionnaires` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-14  0:58:10
+-- Dump completed on 2021-12-14 16:32:13
