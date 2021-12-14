@@ -12,14 +12,21 @@
 <%
 String IC = request.getParameter("IC");
 Patient p = PatientDao.getPatientByIC(IC);
+
+if(p.getPatient_name()==null)
+{
+	response.sendRedirect("searchPatient-failed.jsp");
+}
 %>
-<h1>Clinic Management System</h1>
+<h1 align="center">Clinic Management System</h1>
 <form action="searchPatient.jsp" method="post">
 	<input type="search" name="IC" value="<%=request.getParameter("IC")%>"/>
 	<input type="submit" value="search"/>
 </form>
-<a href="viewpatients.jsp">View All Patients</a>
-<a href="addPatientForm.jsp">Add Patient</a>
+<a   type="button" href="viewpatients.jsp"><input style="float:right; margin-left:15px" type=button value="View All Patients">
+</a>
+<a  type="button" href="addPatientForm.jsp"><input style="float:right" type=button value="Add Patient">
+</a>
 
 
 <table border="1" width="100%">
@@ -46,8 +53,8 @@ Patient p = PatientDao.getPatientByIC(IC);
 		<td><%=p.getDate()%></td>
 		<td><%=p.getPrescriptions()%></td>
 		<td><a href="addOrViewQuestionnaires.jsp?patient_id=<%=p.getPatient_id()%>">Click here</a></td>
-		<td><a href="editform.jsp?patient_id=<%=p.getPatient_id()%>">Edit</a></td>
-		<td><a href="deletepatient.jsp?patient_id=<%=p.getPatient_id()%>">Delete</a></td>
+		<td><a type="button" href="editform.jsp?patient_id=<%=p.getPatient_id()%>"><input type=button value="Edit"></a></td>
+		<td><a type="button" href="deletepatient.jsp?patient_id=<%=p.getPatient_id()%>"><input type=button value="Delete"></a></td>
 	</tr>
 </table>
 

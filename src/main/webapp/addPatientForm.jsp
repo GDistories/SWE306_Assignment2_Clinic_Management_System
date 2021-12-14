@@ -10,15 +10,15 @@
 
 <h1>Add New Patient</h1>
 
-<form action="addPatient.jsp" method="post">
+<form onsubmit="return validate();" action="addPatient.jsp" method="post">
 	<table>
 		<tr>
 			<td>IC No.:</td>
-			<td><input type="text" name="IC"></td>
+			<td><input type="text" name="IC" id="IC"></td>
 		</tr>
 		<tr>
 			<td>Patient Name:</td>
-			<td><input type="text" name="patient_name"></td>
+			<td><input type="text" name="patient_name" id="patient_name"></td>
 		</tr>
 		<tr>
 			<td>Patient Gender:</td>
@@ -27,16 +27,16 @@
 		</tr>
 		<tr>
 			<td>Patient Birthday:</td>
-			<td><input type="date" name="birthday"></td>
+			<td><input type="date" name="birthday" id="birthday"></td>
 			<td>Format:1970-12-31 OR 19701231</td>
 		</tr>
 		<tr>
 			<td>Patient Phone Number:</td>
-			<td><input type="tel" name="phone_number"></td>
+			<td><input type="tel" name="phone_number" id="phone_number"></td>
 		</tr>
 		<tr>
 			<td>Patient Visit Date:</td>
-			<td><input type="date" name="date"></td>
+			<td><input type="date" name="date" id="date"></td>
 			<td>Format:1970-12-31 OR 19701231</td>
 		</tr>
 				
@@ -47,5 +47,7 @@
 	</table>
 </form>
 <a href="viewpatients.jsp">Back to view patients page</a>
+<script src="addPatient.js"></script>
+
 </body>
 </html>
