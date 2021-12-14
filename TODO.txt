@@ -1,2 +1,0 @@
-1. 运行SQL文件
-2. 更改每一个Dao文件的username 和 password 为自己本地数据库
