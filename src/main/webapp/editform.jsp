@@ -15,16 +15,16 @@ Patient p = PatientDao.getPatientByPatientId(Integer.parseInt(patient_id));
 %>
 <h1>Edit Patient Information</h1>
 
-<form action="editPatient.jsp" method="post">
+<form onsubmit="return validate();" action="editPatient.jsp" method="post">
 	<input type="hidden" name="patient_id" value="<%=p.getPatient_id()%>">
 	<table>
 		<tr>
 			<td>IC No.:</td>
-			<td><input type="text" name="IC" value="<%=p.getIC()%>"></td>
+			<td><input type="text" name="IC" value="<%=p.getIC()%>" id="IC"></td>
 		</tr>
 		<tr>
 			<td>Patient Name:</td>
-			<td><input type="text" name="patient_name" value="<%=p.getPatient_name()%>"/></td>
+			<td><input type="text" name="patient_name" value="<%=p.getPatient_name()%>" id="patient_name"/></td>
 		</tr>
 		<tr>
 			<td>Patient Gender:</td>
@@ -33,15 +33,15 @@ Patient p = PatientDao.getPatientByPatientId(Integer.parseInt(patient_id));
 		</tr>
 		<tr>
 			<td>Patient Birthday:</td>
-			<td><input type="date" name="birthday" value="<%=p.getBirthday()%>"></td>
+			<td><input type="date" name="birthday" value="<%=p.getBirthday()%>" id="birthday"></td>
 		</tr>
 		<tr>
 			<td>Patient Phone Number:</td>
-			<td><input type="tel" name="phone_number" value="<%=p.getPhone_number()%>"></td>
+			<td><input type="tel" name="phone_number" value="<%=p.getPhone_number()%>" id="phone_number"></td>
 		</tr>
 		<tr>
 			<td>Patient Visit Date:</td>
-			<td><input type="date" name="date" value="<%=p.getDate()%>"></td>
+			<td><input type="date" name="date" value="<%=p.getDate()%>" id="date"></td>
 		</tr>
 		<tr>
 			<td>Patient Prescriptions:</td>
@@ -61,5 +61,6 @@ Patient p = PatientDao.getPatientByPatientId(Integer.parseInt(patient_id));
 	</table>
 </form>
 <a href="viewpatients.jsp">Back to view patients page</a>
+<script src="editPatient.js"></script>
 </body>
 </html>

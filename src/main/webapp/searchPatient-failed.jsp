@@ -8,8 +8,10 @@
 </head>
 <body>
 
-<jsp:include page="loginpage.jsp"></jsp:include>
-<h1>Login Failed! Please check username or password!</h1>
-
+<jsp:include page="viewpatients.jsp"></jsp:include>
+<h1>Patient Not Found Or Search for null values!</h1>
+<%  
+	response.setHeader("Refresh","1;URL=viewpatients.jsp");  
+%> 
 </body>
 </html>

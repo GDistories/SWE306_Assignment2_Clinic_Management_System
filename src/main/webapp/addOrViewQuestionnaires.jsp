@@ -22,7 +22,7 @@ if(question.getChoice()==null)
 }
 %>
 
-<h1>Covid-19 Test Questionnaire</h1>
+<h1 align="center">Covid-19 Test Questionnaire</h1>
 <table border="1" width="100%">
 	<tr>
 		<td>Patient Name:
@@ -53,6 +53,8 @@ if(question.getChoice()==null)
 		<td><%=question.getClose_contact() %></td>
 	</tr>
 </table>
-<a href="viewpatients.jsp">Back to View Patient Page</a>
+<div style="text-align:center; margin-top:10px">
+	<a type="button" href="viewpatients.jsp"><input  type=button value="Back to View Patient "></a>
+</div>
 </body>
 </html>
